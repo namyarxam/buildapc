@@ -39,6 +39,8 @@ The technology goal of this project is to make a very clean and presentable app 
 ## Entity Relationship Diagrams (ERDs)
 When a user signs up for the first time, there will be no information stored into the database. As they go through the website and add features to their computer, they will add those features to their 1:1 relational 'build'. When the user loads the site in the future, there will be a box with 'current build' that shows there current parts and a 'view build', 'share build', and 'reset build' button.
 
+![erd](http://i.imgur.com/XCWUv97.png)
+
 ## Style Guide
 - Use ES6 **ALWAYS**, wherever applicable 
   - const, let, arrow functions
