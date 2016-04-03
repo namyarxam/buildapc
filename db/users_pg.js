@@ -18,7 +18,7 @@ const cn = {
 const db = pgp(cn);
 
 /* UserAuth Methods */
-let createSecure = (email, password, callback) => {
+function createSecure(email, password, callback) {
   bcrypt.genSalt(password, salt, (err, hash) => {
     bcrypt.hash(password, salt, (err, hash) => {
       callback(email, hash);
@@ -26,9 +26,9 @@ let createSecure = (email, password, callback) => {
   });
 }
 
-let createUser = (req, res, next) => {
+function createUser(req, res, next) {
   createSecure(req.body.email, req.body.password, saveUser);
-  let saveUser = (email, hash) => {
+  function saveUser(email, hash) {
     db.none('INSERT INTO users (email, password_digest) VALUES ($1, $2) RETURNING *', [email, hash])
       .then((data) => {
         next();
@@ -40,7 +40,7 @@ let createUser = (req, res, next) => {
   }
 }
 
-let loginUser = (req, res, next) => {
+function loginUser (req, res, next) {
   let email    = req.body.email;
   let password = req.body.password;
   db.one('SELECT * FROM users WHERE email LIKE $1', [email])
@@ -55,10 +55,10 @@ let loginUser = (req, res, next) => {
     .catch(() => {
       console.error('error finding users');
     })
-
-  /* Function Exports */
-  module.exports.db         = db;
-  module.exports.pgp        = pgp;
-  module.exports.loginUser  = loginUser;
-  module.exports.createUser = createUser;
 }
+
+/* Function Exports */
+module.exports.db         = db;
+module.exports.pgp        = pgp;
+module.exports.loginUser  = loginUser;
+module.exports.createUser = createUser;

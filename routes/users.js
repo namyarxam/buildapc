@@ -29,7 +29,7 @@ users.route('/me')
     res.json({ data: 'success', agent: user });
   })
 
-users.routes('/login')
+users.route('/login')
   .post(db.loginUser, (req, res) => {
     let token = jwt.sign(res.rows, secret);
     res.json({ agent: res.rows, token: token });

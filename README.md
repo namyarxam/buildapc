@@ -43,6 +43,6 @@ When a user signs up for the first time, there will be no information stored int
 
 ## Style Guide
 - Use ES6 **ALWAYS**, wherever applicable 
-  - const, let, arrow functions
+  - const, let, anonymous arrow functions
 - Require, not import
 - Spaces in between declarations (function, statement) and code block `{}`
