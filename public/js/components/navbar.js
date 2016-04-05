@@ -38,7 +38,8 @@ const Navbar = React.createClass({
   },
 
   handleHome: function(e) {
-
+    e.preventDefault();
+    this.props.signUpClicked(false);
   },
 
   render: function() {

@@ -190,3 +190,17 @@ nav li #login-content {
   top: 10px;
   height:21px;
 }
+
+.lock {
+  margin-top: 5em;
+  text-align: center;
+}
+
+.lock img {
+  height: 12em;
+}
+
+#signup-title {
+  text-align: center;
+  margin-top: 5em;
+}
