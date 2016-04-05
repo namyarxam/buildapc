@@ -27,6 +27,7 @@
     "jsonwebtoken": "^5.7.0",
     "minifyify": "^7.3.2",
     "morgan": "^1.7.0",
+    "node-newegg-api": "0.0.1",
     "path": "^0.12.7",
     "pg": "^4.5.2",
     "pg-promise": "^3.4.3",
