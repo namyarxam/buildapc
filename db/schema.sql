@@ -3,10 +3,8 @@ DROP TABLE IF EXISTS builds CASCADE;
 DROP TABLE IF EXISTS processors CASCADE;
 DROP TABLE IF EXISTS memory CASCADE;
 DROP TABLE IF EXISTS hds CASCADE;
-DROP TABLE IF EXISTS ssds CASCADE;
 DROP TABLE IF EXISTS gpus CASCADE;
 DROP TABLE IF EXISTS motherboards CASCADE;
-DROP TABLE IF EXISTS coolers CASCADE;
 DROP TABLE IF EXISTS psus CASCADE;
 DROP TABLE IF EXISTS cases CASCADE;
 DROP TABLE IF EXISTS monitors CASCADE;
@@ -28,7 +26,7 @@ CREATE TABLE builds (
   cpu_id INT REFERENCES processors(cpu_id) NOT NULL,
   memory_id INT REFERENCES memory(memory_id) NOT NULL,
   hd_id INT REFERENCES hds(hd_id) NOT NULL,
-  ssd_id INT REFERENCES ssds(ssd_id), 
+  ssd BOOLEAN NOT NULL,
   gpu_id INT REFERENCES gpus(gpu_id) NOT NULL,
   motherboard_id INT REFERENCES motherboards(motherboard_id) NOT NULL,
   cooler_id INT REFERENCES coolers(cooler_id),
@@ -49,6 +47,7 @@ CREATE TABLE processors (
   store TEXT NOT NULL,
   price INT NOT NULL,
   description TEXT NOT NULL
+  buy_link VARCHAR(255)
 )
 
 CREATE TABLE memory (
@@ -58,6 +57,7 @@ CREATE TABLE memory (
   store TEXT NOT NULL,
   price INT NOT NULL,
   description TEXT NOT NULL
+  buy_link VARCHAR(255)
 )
 
 CREATE TABLE hds (
@@ -67,15 +67,7 @@ CREATE TABLE hds (
   store TEXT NOT NULL,
   price INT NOT NULL,
   description TEXT NOT NULL
-)
-
-CREATE TABLE ssds (
-  ssd_id SERIAL UNIQUE PRIMARY KEY,
-  name TEXT NOT NULL,
-  img_url VARCHAR(255) NOT NULL,
-  store TEXT NOT NULL,
-  price INT NOT NULL,
-  description TEXT NOT NULL
+  buy_link VARCHAR(255)
 )
 
 CREATE TABLE gpus (
@@ -85,6 +77,7 @@ CREATE TABLE gpus (
   store TEXT NOT NULL,
   price INT NOT NULL,
   description TEXT NOT NULL
+  buy_link VARCHAR(255)
 )
 
 CREATE TABLE motherboards (
@@ -94,15 +87,7 @@ CREATE TABLE motherboards (
   store TEXT NOT NULL,
   price INT NOT NULL,
   description TEXT NOT NULL
-)
-
-CREATE TABLE coolers (
-  cooler_id SERIAL UNIQUE PRIMARY KEY,
-  name TEXT NOT NULL,
-  img_url VARCHAR(255) NOT NULL,
-  store TEXT NOT NULL,
-  price INT NOT NULL,
-  description TEXT NOT NULL
+  buy_link VARCHAR(255)
 )
 
 CREATE TABLE psus (
@@ -112,6 +97,7 @@ CREATE TABLE psus (
   store TEXT NOT NULL,
   price INT NOT NULL,
   description TEXT NOT NULL
+  buy_link VARCHAR(255)
 )
 
 CREATE TABLE cases (
@@ -121,6 +107,7 @@ CREATE TABLE cases (
   store TEXT NOT NULL,
   price INT NOT NULL,
   description TEXT NOT NULL
+  buy_link VARCHAR(255)
 )
 
 CREATE TABLE monitors (
@@ -130,6 +117,7 @@ CREATE TABLE monitors (
   store TEXT NOT NULL,
   price INT NOT NULL,
   description TEXT NOT NULL
+  buy_link VARCHAR(255)
 )
 
 CREATE TABLE headphones (
@@ -139,6 +127,7 @@ CREATE TABLE headphones (
   store TEXT NOT NULL,
   price INT NOT NULL,
   description TEXT NOT NULL
+  buy_link VARCHAR(255)
 )
 
 CREATE TABLE keyboards (
@@ -148,6 +137,7 @@ CREATE TABLE keyboards (
   store TEXT NOT NULL,
   price INT NOT NULL,
   description TEXT NOT NULL
+  buy_link VARCHAR(255)
 )
 
 CREATE TABLE mice (
@@ -157,6 +147,7 @@ CREATE TABLE mice (
   store TEXT NOT NULL,
   price INT NOT NULL,
   description TEXT NOT NULL
+  buy_link VARCHAR(255)
 )
 
 CREATE TABLE speakers (
@@ -166,4 +157,5 @@ CREATE TABLE speakers (
   store TEXT NOT NULL,
   price INT NOT NULL,
   description TEXT NOT NULL
+  buy_link VARCHAR(255)
 )
