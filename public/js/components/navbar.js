@@ -7,12 +7,6 @@ const Navbar = React.createClass({
       e.preventDefault();
       $(this).next('#login-content').toggle();
       $(this).toggleClass('active');                    
-      
-      if ($(this).hasClass('active')) {
-        $('#slider').html('&#x25B2;');
-      } else {
-        $('#slider').html('&#x25BC;');
-      }
     })
   },
 
@@ -43,30 +37,38 @@ const Navbar = React.createClass({
     this.props.signUpClicked(true);
   },
 
+  handleHome: function(e) {
+
+  },
+
   render: function() {
     return (
       <div>
         <nav>
-          <ul>
+          <img id="logo" src="images/logo.png"></img>
+          <ul id="navul">
+            <li id="signup">
+              <a href="" onClick={this.handleHome}>HOME</a>
+            </li>
             <li id="login">
               <a id="login-trigger" href="">
-                Log in <span id="slider">&#x25BC;</span>
+                LOG IN
               </a>
               <div id="login-content">
-                <form>
+                <form id="loginform">
                   <fieldset id="inputs">
                     <input id="username" type="email" ref="email" placeholder="Your email address" required/>   
                     <input id="password" type="password" ref="password" placeholder="Password" required/>
                   </fieldset>
                   <fieldset id="actions">
                     <input type="submit" id="submit" onClick={this.handleLogin} value="Log in"/>
-                    <label><input type="checkbox" onChange={this.checkHandler} /> Keep me signed in</label>
+                    <label id="checklabel"><input type="checkbox" onChange={this.checkHandler} /> Keep me signed in</label>
                   </fieldset>
                 </form>
               </div>                     
             </li>
             <li id="signup">
-              <a href="" onClick={this.handleSignup}>Sign up</a>
+              <a href="" onClick={this.handleSignup}>SIGN UP</a>
             </li>
           </ul>
         </nav>

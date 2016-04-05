@@ -46,7 +46,8 @@ const App = React.createClass({
           {this.state.loggedIn ? <Navbartwo /> : <Navbar signUpClicked={this.updateSUC} />}
         </header>
         <div className="title-container">
-          <h3 id="title">Build-A-PC</h3>
+        </div>
+        <div>
           {this.state.signUpClicked ? <SignupForm /> : <div></div>}
         </div>
       </div>
