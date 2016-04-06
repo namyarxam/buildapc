@@ -12,6 +12,7 @@ const Logout      = require('./components/logout');
 const Signup      = require('./components/signup');
 const Navbar      = require('./components/navbar');
 const SignupForm  = require('./components/signupform');
+const Navbartwo   = require('./components/navbartwo');
 
 /* Application */
 const App = React.createClass({
@@ -41,21 +42,29 @@ const App = React.createClass({
   render: function() {
     return (
       <div className="main">
-        <header className="cf">
-          <Navbar signUpClicked={this.updateSUC} />
-        </header>
-        <div>
+        {this.state.loggedIn ? 
           <div>
-           {this.state.signUpClicked ? <SignupForm /> : 
-            <div className="lock">
-              <h3>You're locked out!</h3>
-              <img src="images/blue-lock.png"></img>
-              <h4>Please sign-up / sign-in to access the site.</h4>
-            </div>}
-          </div>
+            <header className="cf">
+              <Navbartwo />
+            </header>
+          </div> 
+          : 
           <div>
+            <header className="cf">
+              <Navbar signUpClicked={this.updateSUC} />
+            </header>
+            <div>
+              <div>
+               {this.state.signUpClicked ? <SignupForm updateAuth={this.updateAuth} /> : 
+                <div className="lock">
+                  <h3>You're locked out!</h3>
+                  <img src="images/blue-lock.png"></img>
+                  <h4>Please sign-up / sign-in to access the site.</h4>
+                </div> }
+              </div>
+            </div>
           </div>
-        </div>
+        }
       </div>
     )
   }
