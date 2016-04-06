@@ -5,7 +5,7 @@ const Navbar = React.createClass({
   componentDidMount: function() {
     $('#login-trigger').click(function(e) {
       e.preventDefault();
-      $(this).next('#login-content').toggle();
+      $(this).next('#login-content').slideToggle();
       $(this).toggleClass('active');                    
     })
   },

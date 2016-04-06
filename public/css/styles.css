@@ -15,7 +15,12 @@ input:focus,textarea:focus {
 
 body {
     margin: 0;
+    height: 100%;
 }     
+
+html {
+  height: 100%;
+}
 
 /*----------------------*/
 
@@ -77,13 +82,14 @@ nav #login-trigger:hover,
 nav #login .active,
 nav #signup a:hover {
   color: white;
+  text-decoration: underline;
 }
 
 nav #login-content {
   display: none;
   height: 13em;
   position: absolute;
-  top: 24px;
+  top: 35px;
   right: 0;
   z-index: 999;    
   background: #f2f2f2;
@@ -98,7 +104,7 @@ nav #login-content {
 }
 
 nav li #login-content {
-  right: 0;
+  right: -19%;
   width: 250px;  
 }
 
@@ -186,8 +192,9 @@ nav li #login-content {
 }
 
 #logo {
+  left: 10.5%;
   position: absolute;
-  top: 10px;
+  top: 11px;
   height:21px;
 }
 
@@ -203,4 +210,107 @@ nav li #login-content {
 #signup-title {
   text-align: center;
   margin-top: 5em;
+}
+
+.adjacent {
+  display: inline-block;
+}
+
+/*--------------------*/
+.main-container {
+  width: 77%;
+  margin-left: 11%;
+  border-top: 1px solid #d9d9d9;
+}
+
+.greybar {
+  padding-top: 1px;
+  width: 100%;
+  height: 4em;
+  background-color: #f2f2f2;
+}
+
+.left-main {
+  width: 63.8%;
+  border-right: 1px solid #d9d9d9;;
+}
+
+.left-main p {
+  color: #737373;
+}
+
+.right-main {
+  width: 36%;
+  position: absolute;
+}
+
+#build-name {
+  margin-left: 11%;
+  line-height: 4em;
+  font-size: 19px;
+  color: #4d94ff;
+  text-transform: capitalize;
+}
+
+.name-form {
+  margin-top: 5%;
+}
+
+.name-form input {
+  margin-right: 1em;
+}
+
+.gutter-left {
+  width: 91%;
+  margin-top: 6%;
+}
+
+.gutter-right {
+  margin-top: 8%;
+  margin-left: 11%;
+  width: 66.7%;
+}
+
+#btrack {
+  color: #737373;
+}
+
+#btrack-name {
+  font-family: Helvetica;
+  text-transform: uppercase;
+  color: #3385ff;
+  font-weight: bold;
+}
+
+.gutter-right h1 {
+  width: 100%;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.gutter-right
+
+.desc p {
+  color: #737373;
+}
+
+#divide {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #4d94ff;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+#divide span {
+  position: relative;
+  background: white;
+  padding: 0 10px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #4d94ff;
+  bottom: 10px;
+}
+
+.bold {
+  font-weight: bold;
 }
