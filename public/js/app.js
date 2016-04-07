@@ -37,6 +37,7 @@ const App = React.createClass({
     auth.login();
   },
 
+
   render: function() {
     return (
       <div className="main">

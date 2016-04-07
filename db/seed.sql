@@ -20,7 +20,7 @@ memory, you probably don''t.', 'http://www.amazon.com/dp/B00J8E8Y5C/?tag=pcpapi-
 -- HD's
 INSERT INTO hds(name, img_url, store, price, description, buy_link) VALUES ('Western Digital Caviar Blue 1TB', 
 'http://www.storagereview.com/images/WDC-Caviar-Blue.jpg', 'OutletPC', '49', '1 terabyte of storage is more than enough for 99% of cases.
-You should never run into a problem.', 'http://www.outletpc.com/dx5854-western-digital-caviar-blue-1tb.html?utm_source=dx5854-western-digital-caviar-blue-1tb&utm_medium=shopping%2Bengine&utm_campaign=pcpartpicker&utm_content=Western%20Digital%2B-%2BHard%20Drives%20%26%20SSD%20%3E%203%2E5%22%20SATA%20Hard%20Drives');
+You should never run into a problem.', 'http://goo.gl/u3cwGZ');
 INSERT INTO hds(name, img_url, store, price, description, buy_link) VALUES ('Western Digital Caviar Red 3TB', 
 'http://www.gts.jo/sites/default/files/3TB%202_0.jpg', 'Amazon', '107', 'Once again, if you don''t know if you need this much storage you don''t. 3
 terabytes is an insane amount of storage.', 'http://www.amazon.com/dp/B008JJLW4M/?tag=pcpapi-20');

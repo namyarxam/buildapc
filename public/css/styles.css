@@ -314,3 +314,193 @@ nav li #login-content {
 .bold {
   font-weight: bold;
 }
+
+.ilb {
+  display: inline-block;
+}
+
+/* ----------------- */
+input[type=range].slider {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 2.4px 0;
+}
+input[type=range].slider:focus {
+  outline: none;
+}
+input[type=range].slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.2px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: rgba(51, 133, 255, 0.78);
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range].slider::-webkit-slider-thumb {
+  box-shadow: 0.9px 0.9px 1px #000031, 0px 0px 0.9px #00004b;
+  border: 0px solid #00001e;
+  height: 13px;
+  width: 50px;
+  border-radius: 22px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -2.6px;
+}
+input[type=range].slider:focus::-webkit-slider-runnable-track {
+  background: rgba(51, 133, 255, 0.78);
+}
+input[type=range].slider::-moz-range-track {
+  width: 100%;
+  height: 8.2px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: rgba(51, 133, 255, 0.78);
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range].slider::-moz-range-thumb {
+  box-shadow: 0.9px 0.9px 1px #000031, 0px 0px 0.9px #00004b;
+  border: 0px solid #00001e;
+  height: 13px;
+  width: 50px;
+  border-radius: 22px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range].slider::-ms-track {
+  width: 100%;
+  height: 8.2px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range].slider::-ms-fill-lower {
+  background: rgba(51, 133, 255, 0.78);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range].slider::-ms-fill-upper {
+  background: rgba(51, 133, 255, 0.78);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range].slider::-ms-thumb {
+  box-shadow: 0.9px 0.9px 1px #000031, 0px 0px 0.9px #00004b;
+  border: 0px solid #00001e;
+  height: 13px;
+  width: 50px;
+  border-radius: 22px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 8.2px;
+}
+input[type=range].slider:focus::-ms-fill-lower {
+  background: rgba(51, 133, 255, 0.78);
+}
+input[type=range].slider:focus::-ms-fill-upper {
+  background: rgba(51, 133, 255, 0.78);
+}
+
+output { 
+  position: absolute;
+  background-image: linear-gradient(top, #444444, #999999);
+  width: 40px; 
+  height: 30px; 
+  text-align: center; 
+  color: white; 
+  border-radius: 10px; 
+  display: inline-block; 
+  font: bold 15px/30px Georgia;
+  bottom: 175%;
+  left: 0;
+  margin-left: -1%;
+}
+
+output:after { 
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #999999;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  margin-top: -1px;
+}
+
+.output {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.lefto {
+  float: left;
+}
+
+.righto {
+  float: right;
+}
+
+.partimg {
+  height: 5.5em;
+  width: 5.5em;
+}
+
+.partprice {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.partname {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.partcontainer {
+  background-color: #f2f2f2;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.pimg-container {
+  text-align: center;
+  width: 23%;
+  position: relative;
+  bottom: 0.2em;
+}
+
+.pinfo-container {
+  position: relative;
+  top: 1em;
+  width: 75%;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.pickbutton {
+  position: relative;
+  left: 79%;
+  bottom: 6em;
+}
+
+.ssd-toggle {
+  text-align: center;
+}
+
+.ssd-toggle label{
+  margin-left: 2%;
+}
+
+.slidedown {
+  position: relative;
+  top: 10px;
+}
+

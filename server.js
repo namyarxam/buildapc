@@ -9,6 +9,7 @@ const path       = require('path');
 const favicon    = require('serve-favicon');
 const app        = express();
 const userRoutes = require('./routes/users');
+const partRoutes = require('./routes/parts');
 
 /* App Config */
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -17,6 +18,7 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'maxfav.ico')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
 app.use('/users', userRoutes);
+app.use('/parts', partRoutes);
 
 /* Server Initialization */
 app.get('/', (req, res) => res.sendFile('index.html'));
