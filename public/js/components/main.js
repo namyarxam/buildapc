@@ -107,7 +107,12 @@ const Main = React.createClass({
                     <StepSix nextStage={this.changeStage} />
                   </div>
                 : <div></div>}
-                {this.state.stage>6 ? <StepSeven /> : <div></div>}
+                {this.state.stage>6 ?
+                  <div>
+                    <h2 id="divide"><span>STEP 7</span></h2>
+                    <StepSeven nextStage={this.changeStage} /> 
+                  </div>
+                : <div></div>}
                 {this.state.stage>7 ? <StepEight /> : <div></div>}
                 {this.state.stage>8 ? <StepNine /> : <div></div>}
                 {this.state.stage>9 ? <StepTen /> : <div></div>}
