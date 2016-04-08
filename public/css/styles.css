@@ -491,16 +491,18 @@ output:after {
   bottom: 6em;
 }
 
-.ssd-toggle {
-  text-align: center;
-}
-
-.ssd-toggle label{
-  margin-left: 2%;
-}
 
 .slidedown {
   position: relative;
   top: 10px;
 }
 
+.checkform {
+  margin-top: -1em;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.checkform label{
+  margin-left: 1em;
+}

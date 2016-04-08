@@ -3,42 +3,39 @@ const React = require('react');
 const StepSeven = React.createClass({
   componentDidMount: function() {
     $('#coolername').text('Stock');
-      $('#coolerimg').attr('src', 'https://cdn2.iconfinder.com/data/icons/interface-part-1/32/circle-diagonal-line-512.png');
-      $('#coolerprice').text('$0');
-      $('#coolerimg').addClass('slidedown');
-      $('#coolerdesc').text('A solid-state drive is not requied (but reccomended!).');
+    $('#coolerimg').attr('src', 'https://www.endpcnoise.com/sites/default/files/intel_1155_cpu_cooler.jpg');
+    $('#coolerprice').text('$0');
+    $('#coolerdesc').text('Unless you are going to be taxing your computer with long gaming sessions or video streaming, the stock cooler will do just fine.');
   },
 
   changeHandler: function() {
     if(this.refs.check.checked) {
-      $('#coolername').text('Crucial BX100 250GB');
-      $('#coolerimg').attr('src', 'http://content.hwigroup.net/images/products_xl/272983/crucial-bx100-250gb.jpg');
-      $('#coolerprice').text('$77');
-      $('#coolerimg').removeClass('slidedown');
-      $('#coolerdesc').text('A very good value cooler with great performance. Low priced for its capacity and one of the best all-around cooler deals.');
+      $('#coolername').text('Cooler Master Hyper 212 EVO');
+      $('#coolerimg').attr('src', 'http://ecx.images-amazon.com/images/I/91wN1wFlqzL._SL1500_.jpg');
+      $('#coolerprice').text('$30');
+      $('#coolerdesc').text('The most popular cooler out there without a doubt. Does everything you could ask for at a very reasonable price.');
     } else {
       $('#coolername').text('Stock');
-      $('#coolerimg').attr('src', 'https://cdn2.iconfinder.com/data/icons/interface-part-1/32/circle-diagonal-line-512.png');
-      $('#coolerimg').addClass('slidedown');
+      $('#coolerimg').attr('src', 'https://www.endpcnoise.com/sites/default/files/intel_1155_cpu_cooler.jpg');
       $('#coolerprice').text('$0');
-      $('#coolerdesc').text('A solid-state drive is not requied (but reccomended!).');
+      $('#coolerdesc').text('Unless you are going to be taxing your computer with long gaming sessions or video streaming, the stock cooler will do just fine.');
     }
   },
 
   clickHandler: function(e) {
     e.preventDefault();
-    this.props.nextStage(6);
+    this.props.nextStage(8);
     $('.cooler-toggle').hide();
   },
 
   render: function() {
     return (
       <div className="step7">
-        <p><span className="bold">THE COOLER:</span> Computer cases (coming soon) come with their own stock coolers which do the job most of the time. If you are going to be doing heavy gaming, a basic cooler is reccomended. </p>
+        <span className="bold">THE CPU COOLER:</span><p className="cooler-toggle">The CPU cooler ... cools the CPU. Most cases come with 'stock' fan coolers that do a good job handling the cooling, but sometimes more is necessary.</p>
         <div className="cooler-toggle">
-          <form>
+          <form className="checkform">
             <input type="checkbox" onChange={this.changeHandler} name="check" ref="check"></input>
-            <label className="ilb" htmlFor="check">I want a cooler</label>
+            <label className="ilb" htmlFor="check">I want another fan</label>
           </form>
         </div>
         <div className="partcontainer">

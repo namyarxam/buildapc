@@ -29,7 +29,7 @@ function createSecure(email, password, callback) {
 function createUser(req, res, next) {
   createSecure(req.body.email, req.body.password, saveUser);
   function saveUser(email, hash) {
-    db.none('INSERT INTO users (email, password_digest) VALUES ($1, $2) RETURNING *', [email, hash])
+    db.one('INSERT INTO users (email, password_digest) VALUES ($1, $2) RETURNING *', [email, hash])
       .then((data) => {
         next();
       })

@@ -32,7 +32,7 @@ const StepTwo = React.createClass({
   render: function() {
     return (
       <div className="step2">
-        <p><span className="bold">THE GRAPHICS CARD:</span> A better graphics cards will enhance your computer's ability to display pictures, videos, and programs. This is the most important piece of the PC for gamers. </p>
+        <span className="bold">THE GRAPHICS CARD:</span><p className="gpu-toggle"> A better graphics cards will enhance your computer's ability to display pictures, videos, and programs. This is the most important piece of the PC for gamers. </p>
         <div className="gpu-toggle">
           <p className="output"><span className="lefto">Average</span><span>Fast</span><span className="righto">Fastest</span></p>
           <form>

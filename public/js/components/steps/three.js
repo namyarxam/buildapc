@@ -32,7 +32,7 @@ const StepThree = React.createClass({
   render: function() {
     return (
       <div className="step3">
-        <p><span className="bold">THE RAM:</span> The computers working memory. The more RAM you have, the more applications you can have open at the same time. </p>
+        <span className="bold">THE RAM:</span><p className="ram-toggle"> The computers working memory. The more RAM you have, the more applications you can have open at the same time. </p>
         <div className="ram-toggle">
           <p className="output"><span className="lefto">Standard</span><span className="righto">Premium</span></p>
           <form>

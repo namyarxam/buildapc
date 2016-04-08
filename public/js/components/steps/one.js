@@ -32,7 +32,7 @@ const StepOne = React.createClass({
   render: function() {
     return (
       <div className="step1">
-        <p><span className="bold">THE PROCESSOR:</span> The processor is all about the speed of your computer. A faster processor will be able to complete tasks quicker than a slower one.</p>
+        <span className="bold">THE PROCESSOR:</span><p className="processor-toggle"> The processor is all about the speed of your computer. A faster processor will be able to complete tasks quicker than a slower one.</p>
         <div className="processor-toggle">
           <p className="output"><span className="lefto">Average</span><span>Fast</span><span className="righto">Fastest</span></p>
           <form>

@@ -3,10 +3,10 @@ const React = require('react');
 const StepFive = React.createClass({
   componentDidMount: function() {
     $('#ssdname').text('None');
-      $('#ssdimg').attr('src', 'https://cdn2.iconfinder.com/data/icons/interface-part-1/32/circle-diagonal-line-512.png');
-      $('#ssdprice').text('$0');
-      $('#ssdimg').addClass('slidedown');
-      $('#ssddesc').text('A solid-state drive is not requied (but reccomended!).');
+    $('#ssdimg').attr('src', 'https://cdn2.iconfinder.com/data/icons/interface-part-1/32/circle-diagonal-line-512.png');
+    $('#ssdprice').text('$0');
+    $('#ssdimg').addClass('slidedown');
+    $('#ssddesc').text('A solid-state drive is not requied (but reccomended!).');
   },
 
   changeHandler: function() {
@@ -34,9 +34,9 @@ const StepFive = React.createClass({
   render: function() {
     return (
       <div className="step5">
-        <p><span className="bold">THE SSD:</span> Solid State Drives are very popular for custom build PC's. A SSD is a seperate hard-drive that is ultra-fast. That means you can save things to your SSD and they will load/start a lot faster than just a plain old HD. SSD's are not required for a PC, but reccomended for increase quality of life. </p>
+        <span className="bold">THE SSD:</span><p className="ssd-toggle">Solid State Drives are very popular for custom build PC's. A SSD is a seperate hard-drive that is ultra-fast. That means you can save things to your SSD and they will load/start a lot faster than just a plain old HD. SSD's are not required for a PC, but reccomended for increase quality of life. </p>
         <div className="ssd-toggle">
-          <form>
+          <form className="checkform">
             <input type="checkbox" onChange={this.changeHandler} name="check" ref="check"></input>
             <label className="ilb" htmlFor="check">I want a SSD</label>
           </form>

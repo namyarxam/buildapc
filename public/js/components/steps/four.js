@@ -32,7 +32,7 @@ const StepFour = React.createClass({
   render: function() {
     return (
      <div className="step4">
-        <p><span className="bold">THE HD:</span> Hard drives are the main component for computer storage. These days HD's are pretty large and can store a lot. </p>
+        <span className="bold">THE HD:</span><p className="hd-toggle"> Hard drives are the main component for computer storage. These days HD's are pretty large and can store a lot. </p>
         <div className="hd-toggle">
           <p className="output"><span className="lefto">Standard</span><span className="righto">Premium</span></p>
           <form>

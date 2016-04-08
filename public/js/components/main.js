@@ -71,50 +71,60 @@ const Main = React.createClass({
                 </form>
               </div>
               <div className="stages">
-                {this.state.stage>0 ? 
+                {this.state.stage >= 1 ? 
                   <div>
                     <h2 id="divide"><span>STEP 1</span></h2>
                     <StepOne nextStage={this.changeStage} /> 
                   </div> 
                 : <div></div>}
-                {this.state.stage>1 ? 
+                {this.state.stage >= 2 ? 
                   <div>
                     <h2 id="divide"><span>STEP 2</span></h2>
                     <StepTwo nextStage={this.changeStage} />
                   </div>
                 : <div></div>}
-                {this.state.stage>2 ? 
+                {this.state.stage >= 3 ? 
                   <div>
                     <h2 id="divide"><span>STEP 3</span></h2>
                     <StepThree nextStage={this.changeStage} /> 
                   </div>
                 : <div></div>}
-                {this.state.stage>3 ?
+                {this.state.stage >= 4 ?
                   <div>
                     <h2 id="divide"><span>STEP 4</span></h2>
                     <StepFour nextStage={this.changeStage} /> 
                   </div>
                 : <div></div>}
-                {this.state.stage>4 ?
+                {this.state.stage >= 5 ?
                   <div>
                     <h2 id="divide"><span>STEP 5</span></h2>
                     <StepFive nextStage={this.changeStage} /> 
                   </div>
                 : <div></div>}
-                {this.state.stage>5 ?
+                {this.state.stage >= 6 ?
                   <div>
                     <h2 id="divide"><span>STEP 6</span></h2>
                     <StepSix nextStage={this.changeStage} />
                   </div>
                 : <div></div>}
-                {this.state.stage>6 ?
+                {this.state.stage >= 7 ?
                   <div>
                     <h2 id="divide"><span>STEP 7</span></h2>
                     <StepSeven nextStage={this.changeStage} /> 
                   </div>
                 : <div></div>}
-                {this.state.stage>7 ? <StepEight /> : <div></div>}
-                {this.state.stage>8 ? <StepNine /> : <div></div>}
+                {this.state.stage >= 8 ? 
+                  <div>
+                    <h2 id="divide"><span>STEP 8</span></h2>
+                    <StepEight nextStage={this.changeStage} />
+                  </div> 
+                : <div></div>}
+                {this.state.stage >= 9 ?
+                  <div>
+                    <h2 id="divide"><span>STEP 9</span></h2>
+                    <StepNine nextStage={this.changeStage} /> 
+                  </div>
+                : <div></div>}
                 {this.state.stage>9 ? <StepTen /> : <div></div>}
                 {this.state.stage>10 ? <StepEleven /> : <div></div>}
                 {this.state.stage>11 ? <StepTwelve /> : <div></div>}

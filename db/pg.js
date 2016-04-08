@@ -135,7 +135,7 @@ let getCases = (req, res, next) => {
       console.log(err);
       return res.status(500).json({ success: false, data: err })
     }
-    client.query('SELECT name, img_url, price, description FROM hds ORDER BY hd_id;', (err, results) => {
+    client.query('SELECT name, img_url, price, description FROM cases ORDER BY case_id;', (err, results) => {
       done();
       if(err) {
         return console.error('error running query', err);

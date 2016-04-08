@@ -32,7 +32,7 @@ const StepSix = React.createClass({
   render: function() {
     return (
      <div className="step6">
-        <p><span className="bold">THE MOTHERBOARD:</span> Motherboards hold your parts together. Every piece of the PC is connected to a port on the board. "Better" motherboards have very marginal differences in performance. </p>
+        <span className="bold">THE MOTHERBOARD:</span><p className="motherboard-toggle"> Motherboards hold your parts together. Every piece of the PC is connected to a port on the board. "Better" motherboards have very marginal differences in performance. </p>
         <div className="motherboard-toggle">
           <p className="output"><span className="lefto">Standard</span><span className="righto">Premium</span></p>
           <form>
