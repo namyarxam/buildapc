@@ -25,6 +25,10 @@ const StepThree = React.createClass({
 
   clickHandler: function(e) {
     e.preventDefault();
+    let price = parseInt($('#ramprice').text().slice(1));
+    let part = $('#ramname').text();
+    this.props.updatePrice(price);
+    this.props.updatePart('ram', part);
     this.props.nextStage(4);
     $('.ram-toggle').hide();
   },

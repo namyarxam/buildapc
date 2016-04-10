@@ -49,4 +49,19 @@ parts.route('/monitors')
     res.send(res.rows);
   })
 
+parts.route('/headphones')
+  .get(db.getHeadphones, (req, res) => {
+    res.send(res.rows);
+  })
+
+parts.route('/keyboards')
+  .get(db.getKeyboards, (req, res) => {
+    res.send(res.rows);
+  })
+
+parts.route('/mice')
+  .get(db.getMice, (req, res) => {
+    res.send(res.rows);
+  })
+
 module.exports = parts;

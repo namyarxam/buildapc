@@ -25,6 +25,10 @@ const StepFour = React.createClass({
 
   clickHandler: function(e) {
     e.preventDefault();
+    let price = parseInt($('#hdprice').text().slice(1));
+    let part = $('#hdname').text();
+    this.props.updatePrice(price);
+    this.props.updatePart('hd', part);
     this.props.nextStage(5);
     $('.hd-toggle').hide();
   },

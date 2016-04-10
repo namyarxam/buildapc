@@ -25,6 +25,10 @@ const StepTwo = React.createClass({
 
   clickHandler: function(e) {
     e.preventDefault();
+    let price = parseInt($('#gpuprice').text().slice(1));
+    let part = $('#gpuname').text();
+    this.props.updatePrice(price);
+    this.props.updatePart('gpu', part);
     this.props.nextStage(3);
     $('.gpu-toggle').hide();
   },

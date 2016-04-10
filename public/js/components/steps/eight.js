@@ -25,6 +25,10 @@ const StepEight = React.createClass({
 
   clickHandler: function(e) {
     e.preventDefault();
+    let price = parseInt($('#caseprice').text().slice(1));
+    let part = $('#casename').text();
+    this.props.updatePrice(price);
+    this.props.updatePart('case', part);
     this.props.nextStage(9);
     $('.case-toggle').hide();
   },

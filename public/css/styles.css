@@ -241,7 +241,7 @@ nav li #login-content {
 
 .right-main {
   width: 36%;
-  position: absolute;
+  position: fixed;
 }
 
 #build-name {
@@ -505,4 +505,52 @@ output:after {
 
 .checkform label{
   margin-left: 1em;
+}
+
+#radio {
+  display: inline-block;
+}
+
+.radio2 {
+  margin-right: 2em;
+}
+
+input[type="radio"] {
+  margin-right: 0.4em;
+}
+
+#fps {
+  position: relative;
+  right: 0.8em;
+}
+
+/* ------------ */
+#btrack-price {
+  color: #737373;
+  margin-bottom: 1em;
+}
+
+#btrack-partName {
+  margin-bottom: 0;
+  color: #4d94ff;
+  font-size: 10px;
+  font-weight: bold;
+  display: inline;
+}
+
+#btrack-parts {
+  font-size: 11px;
+  color: #737373;
+  display: inline;
+}
+
+#finished {
+  line-height: 0em;
+  font-size: 1em;
+  padding: 18px;
+  margin-bottom: 2.5em;
+}
+
+#finished-div {
+  text-align: center;
 }

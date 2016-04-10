@@ -164,6 +164,60 @@ let getMonitors = (req, res, next) => {
   });
 }
 
+let getHeadphones = (req, res, next) => {
+  pg.connect(cs, (err, client, done) => {
+    if(err) {
+      done();
+      console.log(err);
+      return res.status(500).json({ success: false, data: err })
+    }
+    client.query('SELECT name, img_url, price, description FROM headphones ORDER BY headphone_id;', (err, results) => {
+      done();
+      if(err) {
+        return console.error('error running query', err);
+      }
+      res.rows = results.rows;
+      next();
+    });
+  });
+}
+
+let getKeyboards = (req, res, next) => {
+  pg.connect(cs, (err, client, done) => {
+    if(err) {
+      done();
+      console.log(err);
+      return res.status(500).json({ success: false, data: err })
+    }
+    client.query('SELECT name, img_url, price, description FROM keyboards ORDER BY keyboard_id DESC;', (err, results) => {
+      done();
+      if(err) {
+        return console.error('error running query', err);
+      }
+      res.rows = results.rows;
+      next();
+    });
+  });
+}
+
+let getMice = (req, res, next) => {
+  pg.connect(cs, (err, client, done) => {
+    if(err) {
+      done();
+      console.log(err);
+      return res.status(500).json({ success: false, data: err })
+    }
+    client.query('SELECT name, img_url, price, description FROM mice ORDER BY mouse_id;', (err, results) => {
+      done();
+      if(err) {
+        return console.error('error running query', err);
+      }
+      res.rows = results.rows;
+      next();
+    });
+  });
+}
+
 module.exports.getProcessors   = getProcessors;
 module.exports.getGPUs         = getGPUs;
 module.exports.getRAM          = getRAM;
@@ -173,3 +227,6 @@ module.exports.getCoolers      = getCoolers;
 module.exports.getPSUs         = getPSUs;
 module.exports.getCases        = getCases;
 module.exports.getMonitors     = getMonitors;
+module.exports.getHeadphones   = getHeadphones;
+module.exports.getKeyboards    = getKeyboards;
+module.exports.getMice         = getMice;

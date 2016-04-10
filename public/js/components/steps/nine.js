@@ -25,6 +25,10 @@ const StepNine = React.createClass({
 
   clickHandler: function(e) {
     e.preventDefault();
+    let price = parseInt($('#psuprice').text().slice(1));
+    let part = $('#psuname').text();
+    this.props.updatePrice(price);
+    this.props.updatePart('psu', part);
     this.props.nextStage(10);
     $('.psu-toggle').hide();
   },

@@ -25,6 +25,10 @@ const StepSix = React.createClass({
 
   clickHandler: function(e) {
     e.preventDefault();
+    let price = parseInt($('#motherboardprice').text().slice(1));
+    let part = $('#motherboardname').text();
+    this.props.updatePrice(price);
+    this.props.updatePart('mb', part);
     this.props.nextStage(7);
     $('.motherboard-toggle').hide();
   },

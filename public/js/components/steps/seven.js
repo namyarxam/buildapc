@@ -24,6 +24,10 @@ const StepSeven = React.createClass({
 
   clickHandler: function(e) {
     e.preventDefault();
+    let price = parseInt($('#coolerprice').text().slice(1));
+    let part = $('#coolername').text();
+    this.props.updatePrice(price);
+    this.props.updatePart('cooler', part);
     this.props.nextStage(8);
     $('.cooler-toggle').hide();
   },

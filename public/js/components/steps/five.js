@@ -27,6 +27,10 @@ const StepFive = React.createClass({
 
   clickHandler: function(e) {
     e.preventDefault();
+    let price = parseInt($('#ssdprice').text().slice(1));
+    let part = $('#ssdname').text();
+    this.props.updatePrice(price);
+    this.props.updatePart('ssd', part);
     this.props.nextStage(6);
     $('.ssd-toggle').hide();
   },

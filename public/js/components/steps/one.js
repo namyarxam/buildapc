@@ -25,6 +25,10 @@ const StepOne = React.createClass({
 
   clickHandler: function(e) {
     e.preventDefault();
+    let price = parseInt($('#processorprice').text().slice(1));
+    let part = $('#processorname').text();
+    this.props.updatePrice(price);
+    this.props.updatePart('processor', part);
     this.props.nextStage(2);
     $('.processor-toggle').hide();
   },
