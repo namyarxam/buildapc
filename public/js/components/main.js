@@ -206,7 +206,6 @@ const Main = React.createClass({
                 <div>
                   <p id="btrack-partName">PROCESSOR:</p>
                   <p id="btrack-parts">  {this.state.parts.processor}</p>
-                  <EditButton part='processor' />
                 </div>
               : <p></p>}
               {this.state.parts.gpu ? 
