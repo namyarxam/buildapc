@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const salt   = bcrypt.genSaltSync(10);
 
 /* Database Configuration */
-if(process.NODE_ENV === 'production') {
+if(process.env.NODE_ENV === 'production') {
   var cn = process.env.DATABASE_URL;
 } else {
   require('dotenv').config();
