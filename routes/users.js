@@ -1,7 +1,6 @@
 'use strict'
 
 /* Global Requires */
-require('dotenv').config();
 const express    = require('express');
 const db         = require('../db/users_pg');
 const secret     = process.env.SECRET;
