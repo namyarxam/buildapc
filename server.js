@@ -29,4 +29,5 @@ app.use('/parts', partRoutes);
 
 /* Server Initialization */
 app.get('/', (req, res) => res.sendFile('index.html'));
-app.listen(3000, () => console.log(`Server initialized on // ${new Date()}`));
+var port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Server initialized on // ${new Date()}`));
