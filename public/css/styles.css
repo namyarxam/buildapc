@@ -524,6 +524,14 @@ input[type="radio"] {
   right: 0.8em;
 }
 
+.edit-button {
+  display: inline;
+  margin-left: 1em;
+  cursor: pointer;
+  color: red;
+  font-size: 11px;
+}
+
 /* ------------ */
 #btrack-price {
   color: #737373;

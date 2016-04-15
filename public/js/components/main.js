@@ -15,6 +15,7 @@ const StepEleven   = require('./steps/eleven');
 const StepTwelve   = require('./steps/twelve');
 const StepThirteen = require('./steps/thirteen');
 const StepFourteen = require('./steps/fourteen');
+const EditButton   = require('./editbutton');
 
 const Main = React.createClass({
   getInitialState: function() {
@@ -105,6 +106,7 @@ const Main = React.createClass({
                   <div>
                     <h2 id="divide"><span>STEP 1</span></h2>
                     <StepOne updatePart={this.updatePart} updatePrice={this.updatePrice} nextStage={this.changeStage} /> 
+                    <EditButton updatePart={this.updatePart} updatePrice={this.updatePrice} nextStage={this.nextStage} num="1" />
                   </div> 
                 : <div></div>}
                 {this.state.stage >= 2 ? 

@@ -1,18 +1,21 @@
 'use strict'
 
 /* Global Requires */
-require('dotenv').config();
 const pgp    = require('pg-promise')({});
 const bcrypt = require('bcrypt');
 const salt   = bcrypt.genSaltSync(10);
 
 /* Database Configuration */
-const cn = {
-  host: 'localhost',
-  port: 5432,
-  database: process.env.DB_NAME,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD
+if(process.NODE_ENV === 'production') {
+  var cn = process.env.DATABASE_URL;
+} else {
+  var cn = {
+    host: 'localhost',
+    port: 5432,
+    database: process.env.DB_NAME,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD
+  }
 }
 
 const db = pgp(cn);

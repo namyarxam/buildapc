@@ -1,6 +1,10 @@
 'use strict';
 const pg = require('pg');
-const cs = `postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@localhost/${process.env.DB_NAME}`;
+if(process.NODE_ENV === 'production') {
+  var cs = process.env.DATABASE_URL;
+} else {
+  var cs = `postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@localhost/${process.env.DB_NAME}`;
+}
 
 let getProcessors = (req, res, next) => {
   pg.connect(cs, (err, client, done) => {
