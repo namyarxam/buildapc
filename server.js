@@ -11,6 +11,11 @@ const userRoutes = require('./routes/users');
 const partRoutes = require('./routes/parts');
 const app        = express();
 
+if(process.env.NODE_ENV === 'development') {
+  console.log('in development.');
+  require('dotenv').config();
+}
+
 /* App Config */
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
