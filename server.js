@@ -1,17 +1,16 @@
 'use strict'
 
 /* Global Requires */
-if(process.env.NODE_ENV != 'production') {
-  require('dotenv').config();
-}
+
 const express    = require('express');
 const logger     = require('morgan');
 const bodyParser = require('body-parser');
 const path       = require('path');
 const favicon    = require('serve-favicon');
-const app        = express();
 const userRoutes = require('./routes/users');
 const partRoutes = require('./routes/parts');
+require('dotenv').config();
+const app        = express();
 
 /* App Config */
 app.use(bodyParser.urlencoded({ extended: false }));

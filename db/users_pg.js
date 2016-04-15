@@ -4,6 +4,7 @@
 const pgp    = require('pg-promise')({});
 const bcrypt = require('bcrypt');
 const salt   = bcrypt.genSaltSync(10);
+require('dotenv').config();
 
 /* Database Configuration */
 if(process.NODE_ENV === 'production') {

@@ -1,13 +1,19 @@
 'use strict';
 const pg = require('pg');
-if(process.NODE_ENV === 'production') {
-  var cs = process.env.DATABASE_URL;
+if(process.env.NODE_ENV === 'production') {
+  var config = process.env.DATABASE_URL;
 } else {
-  var cs = process.env.DATABASE_URL || `postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@localhost/${process.env.DB_NAME}`;
+  var config = process.env.DATABASE_URL || {
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    database: process.env.DB_NAME.
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS
+  };
 }
 
 let getProcessors = (req, res, next) => {
-  pg.connect(cs, (err, client, done) => {
+  pg.connect(config, (err, client, done) => {
     if(err) {
       done();
       console.log(err);
@@ -25,7 +31,7 @@ let getProcessors = (req, res, next) => {
 }
 
 let getGPUs = (req, res, next) => {
-  pg.connect(cs, (err, client, done) => {
+  pg.connect(config, (err, client, done) => {
     if(err) {
       done();
       console.log(err);
@@ -43,7 +49,7 @@ let getGPUs = (req, res, next) => {
 }
 
 let getRAM = (req, res, next) => {
-  pg.connect(cs, (err, client, done) => {
+  pg.connect(config, (err, client, done) => {
     if(err) {
       done();
       console.log(err);
@@ -61,7 +67,7 @@ let getRAM = (req, res, next) => {
 }
 
 let getHDs = (req, res, next) => {
-  pg.connect(cs, (err, client, done) => {
+  pg.connect(config, (err, client, done) => {
     if(err) {
       done();
       console.log(err);
@@ -79,7 +85,7 @@ let getHDs = (req, res, next) => {
 }
 
 let getMotherboards = (req, res, next) => {
-  pg.connect(cs, (err, client, done) => {
+  pg.connect(config, (err, client, done) => {
     if(err) {
       done();
       console.log(err);
@@ -97,7 +103,7 @@ let getMotherboards = (req, res, next) => {
 }
 
 let getCoolers = (req, res, next) => {
-  pg.connect(cs, (err, client, done) => {
+  pg.connect(config, (err, client, done) => {
     if(err) {
       done();
       console.log(err);
@@ -115,7 +121,7 @@ let getCoolers = (req, res, next) => {
 }
 
 let getPSUs = (req, res, next) => {
-  pg.connect(cs, (err, client, done) => {
+  pg.connect(config, (err, client, done) => {
     if(err) {
       done();
       console.log(err);
@@ -133,7 +139,7 @@ let getPSUs = (req, res, next) => {
 }
 
 let getCases = (req, res, next) => {
-  pg.connect(cs, (err, client, done) => {
+  pg.connect(config, (err, client, done) => {
     if(err) {
       done();
       console.log(err);
@@ -151,7 +157,7 @@ let getCases = (req, res, next) => {
 }
 
 let getMonitors = (req, res, next) => {
-  pg.connect(cs, (err, client, done) => {
+  pg.connect(config, (err, client, done) => {
     if(err) {
       done();
       console.log(err);
@@ -169,7 +175,7 @@ let getMonitors = (req, res, next) => {
 }
 
 let getHeadphones = (req, res, next) => {
-  pg.connect(cs, (err, client, done) => {
+  pg.connect(config, (err, client, done) => {
     if(err) {
       done();
       console.log(err);
@@ -187,7 +193,7 @@ let getHeadphones = (req, res, next) => {
 }
 
 let getKeyboards = (req, res, next) => {
-  pg.connect(cs, (err, client, done) => {
+  pg.connect(config, (err, client, done) => {
     if(err) {
       done();
       console.log(err);
@@ -205,7 +211,7 @@ let getKeyboards = (req, res, next) => {
 }
 
 let getMice = (req, res, next) => {
-  pg.connect(cs, (err, client, done) => {
+  pg.connect(config, (err, client, done) => {
     if(err) {
       done();
       console.log(err);
