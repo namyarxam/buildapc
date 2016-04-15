@@ -1,9 +1,9 @@
 'use strict';
 const pg = require('pg');
-require('dotenv').config();
-if(process.env.NODE_ENV === 'production') {
+if(process.NODE_ENV === 'production') {
   var config = process.env.DATABASE_URL;
 } else {
+  require('dotenv').config();
   var config = process.env.DATABASE_URL || {
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,

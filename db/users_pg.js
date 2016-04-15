@@ -4,12 +4,12 @@
 const pgp    = require('pg-promise')({});
 const bcrypt = require('bcrypt');
 const salt   = bcrypt.genSaltSync(10);
-require('dotenv').config();
 
 /* Database Configuration */
 if(process.NODE_ENV === 'production') {
   var cn = process.env.DATABASE_URL;
 } else {
+  require('dotenv').config();
   var cn = process.env.DATABASE_URL || {
     host: 'localhost',
     port: 5432,
