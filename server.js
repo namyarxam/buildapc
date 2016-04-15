@@ -14,6 +14,8 @@ const app        = express();
 if(process.env.NODE_ENV === 'development') {
   console.log('in development.');
   require('dotenv').config();
+} else {
+  console.log('in production.');
 }
 
 /* App Config */
