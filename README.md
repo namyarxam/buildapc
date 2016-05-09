@@ -1,4 +1,4 @@
-![Visit the site!](buildapc.herokuapp.com)
+[Visit the site!](buildapc.herokuapp.com)
 
 # Build-A-PC
 ### Market 
