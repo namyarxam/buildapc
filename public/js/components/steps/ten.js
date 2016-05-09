@@ -6,6 +6,9 @@ const StepTen = React.createClass({
     $('#optimg').attr('src', 'https://cdn2.iconfinder.com/data/icons/interface-part-1/32/circle-diagonal-line-512.png');
     $('#optprice').text('$0');
     $('#optdesc').text('No optical drive.');
+    $("html, body").animate({
+      scrollTop: $('#bottom').offset().top
+    }, 1000);
   },
 
   changeHandler: function() {

@@ -10,6 +10,9 @@ const StepTwo = React.createClass({
         $('#gpuprice').text(`$${obj.price}`);
         $('#gpudesc').text(obj.description);
       })
+    $("html, body").animate({
+      scrollTop: $('#bottom').offset().top
+    }, 1000);
   },
 
   showPart: function() {

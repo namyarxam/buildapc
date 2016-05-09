@@ -10,6 +10,9 @@ const StepEight = React.createClass({
         $('#caseprice').text(`$${obj.price}`);
         $('#casedesc').text(obj.description);
       })
+    $("html, body").animate({
+      scrollTop: $('#bottom').offset().top
+    }, 1000);
   },
 
   showPart: function() {

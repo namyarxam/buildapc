@@ -10,6 +10,9 @@ const StepFour = React.createClass({
         $('#hdprice').text(`$${obj.price}`);
         $('#hddesc').text(obj.description);
       })
+    $("html, body").animate({
+      scrollTop: $('#bottom').offset().top
+    }, 1000);
   },
 
   showPart: function() {

@@ -31,7 +31,7 @@ const App = React.createClass({
     this.state.signUpClicked = boolean;
     this.setState({ signUpClicked: boolean })
   },
-
+  
   componentWillMount: function() {
     auth.onChange = this.updateAuth;
     auth.login();

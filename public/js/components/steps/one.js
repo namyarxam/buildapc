@@ -10,6 +10,9 @@ const StepOne = React.createClass({
         $('#processorprice').text(`$${obj.price}`);
         $('#processordesc').text(obj.description);
       })
+    $("html, body").animate({
+      scrollTop: $('#bottom').offset().top
+    }, 1000);
   },
 
   showPart: function() {

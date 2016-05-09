@@ -10,6 +10,9 @@ const StepThirteen = React.createClass({
         $('#keyboardprice').text(`$${data[0].price}`);
         $('#keyboarddesc').text(data[0].description);
       })
+    $("html, body").animate({
+      scrollTop: $('#bottom').offset().top
+    }, 1000);
   },
 
   changeHandler: function() {

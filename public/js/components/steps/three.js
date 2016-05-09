@@ -10,6 +10,9 @@ const StepThree = React.createClass({
         $('#ramprice').text(`$${obj.price}`);
         $('#ramdesc').text(obj.description);
       })
+    $("html, body").animate({
+      scrollTop: $('#bottom').offset().top
+    }, 1000);
   },
 
   showPart: function() {

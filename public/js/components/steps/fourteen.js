@@ -10,6 +10,9 @@ const StepFourteen = React.createClass({
         $('#mouseprice').text(`$${obj.price}`);
         $('#mousedesc').text(obj.description);
       })
+    $("html, body").animate({
+      scrollTop: $('#bottom').offset().top
+    }, 1000);
   },
 
   showPart: function() {

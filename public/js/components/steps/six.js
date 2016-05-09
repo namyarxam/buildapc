@@ -10,6 +10,9 @@ const StepSix = React.createClass({
         $('#motherboardprice').text(`$${obj.price}`);
         $('#motherboarddesc').text(obj.description);
       })
+    $("html, body").animate({
+      scrollTop: $('#bottom').offset().top
+    }, 1000);
   },
 
   showPart: function() {

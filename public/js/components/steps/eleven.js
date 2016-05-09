@@ -10,6 +10,9 @@ const StepEleven = React.createClass({
         $('#monitorprice').text(`$${obj.price}`);
         $('#monitordesc').text(obj.description);
       })
+    $("html, body").animate({
+      scrollTop: $('#bottom').offset().top
+    }, 1000);
   },
 
   showPart: function() {

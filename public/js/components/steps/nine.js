@@ -10,6 +10,9 @@ const StepNine = React.createClass({
         $('#psuprice').text(`$${obj.price}`);
         $('#psudesc').text(obj.description);
       })
+    $("html, body").animate({
+      scrollTop: $('#bottom').offset().top
+    }, 1000);
   },
 
   showPart: function() {

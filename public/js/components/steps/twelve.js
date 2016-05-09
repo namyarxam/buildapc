@@ -10,6 +10,9 @@ const StepTwelve = React.createClass({
         $('#headphoneprice').text(`$${obj.price}`);
         $('#headphonedesc').text(obj.description);
       })
+    $("html, body").animate({
+      scrollTop: $('#bottom').offset().top
+    }, 1000);
   },
 
   showPart: function() {

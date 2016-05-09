@@ -6,6 +6,9 @@ const StepSeven = React.createClass({
     $('#coolerimg').attr('src', 'https://www.endpcnoise.com/sites/default/files/intel_1155_cpu_cooler.jpg');
     $('#coolerprice').text('$0');
     $('#coolerdesc').text('Unless you are going to be taxing your computer with long gaming sessions or video streaming, the stock cooler will do just fine.');
+    $("html, body").animate({
+      scrollTop: $('#bottom').offset().top
+    }, 1000);
   },
 
   changeHandler: function() {
