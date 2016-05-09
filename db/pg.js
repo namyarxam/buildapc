@@ -3,7 +3,8 @@ const pg = require('pg');
 if(process.env.NODE_ENV === 'production') {
   var config = process.env.DATABASE_URL;
 } else {
-  var config = process.env.DATABASE_URL || {
+  require('dotenv').config();
+  var config = {
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     database: process.env.DB_NAME,

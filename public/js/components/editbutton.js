@@ -17,7 +17,7 @@ const EditButton = React.createClass({
 
   render: function() {
     return (
-      <p className="edit-button" onClick={this.clickHandler}>edit button</p>
+      <p className="edit-button" onClick={this.clickHandler}>edit</p>
     )
   }
 })

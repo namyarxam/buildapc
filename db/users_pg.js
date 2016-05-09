@@ -9,6 +9,7 @@ const salt   = bcrypt.genSaltSync(10);
 if(process.env.NODE_ENV === 'production') {
   var cn = process.env.DATABASE_URL;
 } else {
+  require('dotenv').config();
   var cn = process.env.DATABASE_URL || {
     host: 'localhost',
     port: 5432,

@@ -2,13 +2,16 @@ const React = require('react');
 
 const StepFive = React.createClass({
   componentDidMount: function() {
+    $('html', 'body').animate({
+      scrollTop: $("#bottom").offset().top
+    }, 2000);
     $('#ssdname').text('None');
     $('#ssdimg').attr('src', 'https://cdn2.iconfinder.com/data/icons/interface-part-1/32/circle-diagonal-line-512.png');
     $('#ssdprice').text('$0');
     $('#ssdimg').addClass('slidedown');
     $('#ssddesc').text('A solid-state drive is not requied (but reccomended!).');
   },
-
+  
   changeHandler: function() {
     if(this.refs.check.checked) {
       $('#ssdname').text('Crucial BX100 250GB');
