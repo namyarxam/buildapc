@@ -1,5 +1,6 @@
 const React = require('react');
 
+/* Edit button - scroll to stage and undo hide */
 const EditButton = React.createClass({
   clickHandler: function(e) {
     e.preventDefault();
