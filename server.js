@@ -1,7 +1,6 @@
 'use strict'
 
 /* Global Requires */
-
 const express    = require('express');
 const logger     = require('morgan');
 const bodyParser = require('body-parser');
@@ -10,6 +9,7 @@ const favicon    = require('serve-favicon');
 const userRoutes = require('./routes/users');
 const partRoutes = require('./routes/parts');
 const app        = express();
+
 
 if(process.env.NODE_ENV === 'development') {
   require('dotenv').config();
